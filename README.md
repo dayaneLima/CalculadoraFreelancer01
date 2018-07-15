@@ -38,7 +38,7 @@ Ao criarmos um projeto em Xamarin Forms nem sempre ele vem atualizado com a últ
 
 Para isso clique com o botão direito sobre a solution e vá em <i>Manage Nuget Packages for Solution</i>. Na guia aberta, escolha <i>Updates</i>, marque todas e clique em <i>install</i>.
 
-![Criar Página no Xamarin Forms](https://github.com/dayaneLima/CalculadoraFreelancer01/blob/master/Docs/Gifs/atualizacaoNuget.gif)
+![Atualização via Nuget](https://github.com/dayaneLima/CalculadoraFreelancer01/blob/master/Docs/Gifs/atualizacaoNuget.gif)
 
 ## Tela de cálculo do valor da hora
 
@@ -93,8 +93,50 @@ Edite o arquivo CalculoValorHoraPage.xaml e adicione o código abaixo:
 
 Agora mandamos executar o projeto, a tela gerada deverá ser igual a esta:
 
-<img src="https://github.com/dayaneLima/CalculadoraFreelancer01/blob/master/Docs/Imgs/calculadoraFreelancerO1TelaValorHora.PNG" alt="Criar Página no Xamarin Forms" width="260">
+<img src="https://github.com/dayaneLima/CalculadoraFreelancer01/blob/master/Docs/Imgs/calculadoraFreelancerO1TelaValorHora.PNG" alt="Tela calculadora freelancer" width="260">
 
-Utilizamos nos campos de entrada de texto (Entry) o Keyboard="Numeric", mas há outros tipos de teclado, como Email e Telephone. Pra mais informações veja a documentação da Microsoft: 
+Utilizamos nos campos de entrada de texto (Entry) o Keyboard="Numeric", mas há outros tipos de teclado, como Email e Telephone. Pra mais informações veja a documentação da Microsoft: <a  href='https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/text/entry' target="_blank">Documentação do Entry</a>
 
-<a  href='https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/text/entry' target="_blank">Documentação do Entry</a>
+## Cálculo do valor da hora
+
+Todo arquivo .xaml tem uma classe vinculada a ele, terminado com o nome .xaml.cs, como mostrado na imagem abaixo.
+
+
+Tudo que é feito no xaml, conseguimos acessar na nossa classe C#, e nessa classe também conseguimos criar layouts e atribuir no nosso xaml. Ao utilizarmos essa classe, falamos que estamos fazendo código em <i>CodeBehind</i>.
+
+Então vamos no arquivo CalculoValorHoraPage.xaml.cs, no construtor da classe vamos atribuir o evento de click para o nosso botão de calcular. O código ficará como o mostrado abaixo:
+
+```c#
+	public CalculoValorHoraPage ()
+		{
+          InitializeComponent ();
+          CalcularValorHoraButton.Clicked += CalcularValorHoraButton_Clicked;
+		}
+````
+
+Agora criaremos a função responsável pelo cálculo:
+
+```c#
+     private void CalcularValorHoraButton_Clicked(object sender, EventArgs e)
+        {
+
+            double valorGanhoAnual = double.Parse(ValorGanhoMes.Text) * 12;
+            int totalDiasTrabalhadosPorAno = int.Parse(DiasTrabalhadosPorMes.Text) * 12;
+
+            if (!string.IsNullOrEmpty(DiasFeriasPorAno.Text))
+            {
+                totalDiasTrabalhadosPorAno -= int.Parse(DiasFeriasPorAno.Text);
+            }
+
+            double valorHora = valorGanhoAnual / (totalDiasTrabalhadosPorAno * int.Parse(HorasTrabalhadasPorDia.Text));
+
+            ValorDaHora.Text = $"{valorHora.ToString("C")} / hora";
+
+        }
+````
+ 
+## Resultado
+
+Vamos mandar executar o projeto e testar o cálculo:
+
+<img src="https://github.com/dayaneLima/CalculadoraFreelancer01/blob/master/Docs/Gifs/calculadoraFreelancer01.gif" alt="Tela App Calculadora Freelancer funcionando" width="260">
