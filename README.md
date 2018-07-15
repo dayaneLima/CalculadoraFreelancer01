@@ -3,6 +3,13 @@
 Se trata de um app inicial para cálculo do valor da hora do profissional freelancer.
 
 ## Como criar um projeto Xamarin Forms no Visual Studio
+
+Para criar um projeto Xamarin Forms vá em  <i>File -> new -> Project</i>
+
+Em Visual C#, escolha a opção  <i>Cross-platform</i>, a direita terá somente a opção <i>Mobile App(Xamarin Forms)</i>, a escolha e dê um nome para o projeto. Clique em Ok.
+
+Agora escolha a opção <i>Blank App</i>. Deixe marcado as opções IOS e Android. Marque a opção <i>.NET Standard</i> e clique em OK. O projeto será criado.
+
 ![Criar Projeto Xamarin Forms](https://github.com/dayaneLima/CalculadoraFreelancer01/blob/master/Docs/Gifs/criacaoProjeto.gif)
 
 ## Navegação - App.xaml.cs
@@ -27,13 +34,15 @@ Execute o projeto e veja se abriu a tela default do xamarin, similar a imagem ab
 
 O Nuget é o gerenciador de pacotes para .NET. Através do Nuget você pode baixar bibliotecas de terceiros, além de poder criar as suas e compartilhá-las.
 
-Ao criarmos um projeto em Xamarin Forms nem sempre ele vem atualizado com a última versão do framework. Então antes de começar a codificarmos é bom atualizar para a última versão das bibliotecas do Xamarin Forms. Abaixo mostra como gerenciar os pacotes via Nuget e atualizar as bibliotecas.
+Ao criarmos um projeto em Xamarin Forms nem sempre ele vem atualizado com a última versão do framework. Então antes de começar a codificarmos é bom atualizar para a última versão das bibliotecas do Xamarin Forms. 
+
+Para isso clique com o botão direito sobre a solution e vá em <i>Manage Nuget Packages for Solution</i>. Na guia aberta, escolha <i>Updates</i>, marque todas e clique em <i>install</i>.
 
 ![Criar Página no Xamarin Forms](https://github.com/dayaneLima/CalculadoraFreelancer01/blob/master/Docs/Gifs/atualizacaoNuget.gif)
 
 ## Tela de cálculo do valor da hora
 
-Vamos criar uma Page chamada CalculoValorHoraPage, abaixo é mostrado como criar uma página no Xamarin Forms:
+Vamos criar uma Page chamada CalculoValorHoraPage, clique com o botão direito sobre o projeto principal (chamado CalculadoraFreelancer01), vá em <i>Add -> new item</i>, escolha Xamarin Forms, nas opções a esquerda que serão mostradas, escolha a escrita <i>Content Page</i>. Cuidado para não escolher a <i>Content Page (C#)</i>. Esta última criará somente a classe em c#, não tendo o arquivo .xaml para criação de layouts com xml.
 
 ![Criar Página no Xamarin Forms](https://github.com/dayaneLima/CalculadoraFreelancer01/blob/master/Docs/Gifs/criacaoPage.gif)
 
@@ -51,18 +60,22 @@ Edite o arquivo CalculoValorHoraPage.xaml e adicione o código abaixo:
         <StackLayout>
             
             <Entry Placeholder="Valor ganho por mês"
-                   x:Name="ValorGanhoMes"/>
+                   x:Name="ValorGanhoMes"
+                   Keyboard="Numeric"/>
             
             <Entry Placeholder="Horas trabalhadas por dia"
-                   x:Name="HorasTrabalhadasPorDia"/>
+                   x:Name="HorasTrabalhadasPorDia"
+                   Keyboard="Numeric"/>
             
             <Entry Placeholder="Dias trabalhados por mês"
-                   x:Name="DiasTrabalhadosPorMes"/>
+                   x:Name="DiasTrabalhadosPorMes"
+                   Keyboard="Numeric"/>
             
             <Entry Placeholder="Dias de férias por ano"
-                   x:Name="DiasFeriasPorAno"/>
+                   x:Name="DiasFeriasPorAno"
+                   Keyboard="Numeric"/>
 
-            <Label Text="R$ 00,00"
+            <Label Text="R$ 00,00 / hora"
                    x:Name="ValorDaHora"
                    FontSize="Large"
                    TextColor="Green"/>
@@ -82,3 +95,6 @@ Agora mandamos executar o projeto, a tela gerada deverá ser igual a esta:
 
 <img src="https://github.com/dayaneLima/CalculadoraFreelancer01/blob/master/Docs/Imgs/calculadoraFreelancerO1TelaValorHora.PNG" alt="Criar Página no Xamarin Forms" width="260">
 
+Utilizamos nos campos de entrada de texto (Entry) o Keyboard="Numeric", mas há outros tipos de teclado, como Email e Telephone. Pra mais informações veja a documentação da Microsoft: 
+
+<a  href='https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/text/entry' target="_blank">Documentação do Entry</a>
