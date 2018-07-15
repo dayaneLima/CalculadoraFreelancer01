@@ -8,18 +8,22 @@
         <StackLayout>
             
             <Entry Placeholder="Valor ganho por mês"
-                   x:Name="ValorGanhoMes"/>
+                   x:Name="ValorGanhoMes"
+                   Keyboard="Numeric"/>
             
             <Entry Placeholder="Horas trabalhadas por dia"
-                   x:Name="HorasTrabalhadasPorDia"/>
+                   x:Name="HorasTrabalhadasPorDia"
+                   Keyboard="Numeric"/>
             
             <Entry Placeholder="Dias trabalhados por mês"
-                   x:Name="DiasTrabalhadosPorMes"/>
+                   x:Name="DiasTrabalhadosPorMes"
+                   Keyboard="Numeric"/>
             
             <Entry Placeholder="Dias de férias por ano"
-                   x:Name="DiasFeriasPorAno"/>
+                   x:Name="DiasFeriasPorAno"
+                   Keyboard="Numeric"/>
 
-            <Label Text="R$ 00,00"
+            <Label Text="R$ 00,00 / hora"
                    x:Name="ValorDaHora"
                    FontSize="Large"
                    TextColor="Green"/>
