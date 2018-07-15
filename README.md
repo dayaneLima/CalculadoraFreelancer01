@@ -20,8 +20,8 @@ Altere para o cógido abaixo:
 
 ## Verificar se está tudo certo
 Execute o projeto e veja se abriu a tela default do xamarin, similar a imagem abaixo:
-![Criar Página no Xamarin Forms](https://github.com/dayaneLima/CalculadoraFreelancer01/blob/master/Docs/Imgs/telaInicialXamarin.PNG)
 
+<img src="https://github.com/dayaneLima/CalculadoraFreelancer01/blob/master/Docs/Imgs/telaInicialXamarin.PNG" alt="Criar Página no Xamarin Forms" width="260">
 
 ## Atualização - Nuget
 
@@ -39,7 +39,7 @@ Vamos criar uma Page chamada CalculoValorHoraPage, abaixo é mostrado como criar
 
 Esta tela será responsável por calcular o valor da hora do profissional freelancer. Precisaremos então para os cálculos saber qual é o valor que o profissional quer ganhar por mês, as horas trabalhadas por dia, quantos dias irá trabalhar por mês e por fim, quantos dias terá de férias por ano. Criaremos então um campo para cada item citado anteriormente. Precisaremos também de um campo para mostrar o resultado da operação, que é o valor da hora do profissional.
 
-Abaixo segue o código para criação da tela:
+Edite o arquivo CalculoValorHoraPage.xaml e adicione o código abaixo:
 
  ```xml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -80,5 +80,5 @@ Abaixo segue o código para criação da tela:
 
 Agora mandamos executar o projeto, a tela gerada deverá ser igual a esta:
 
-![Criar Página no Xamarin Forms](https://github.com/dayaneLima/CalculadoraFreelancer01/blob/master/Docs/Imgs/calculadoraFreelancerO1TelaValorHora.PNG)
+<img src="https://github.com/dayaneLima/CalculadoraFreelancer01/blob/master/Docs/Imgs/calculadoraFreelancerO1TelaValorHora.PNG" alt="Criar Página no Xamarin Forms" width="260">
 
