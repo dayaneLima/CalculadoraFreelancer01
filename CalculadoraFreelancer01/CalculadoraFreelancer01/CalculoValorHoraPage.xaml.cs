@@ -15,6 +15,25 @@ namespace CalculadoraFreelancer01
 		public CalculoValorHoraPage ()
 		{
 			InitializeComponent ();
+
+            CalcularValorHoraButton.Clicked += CalcularValorHoraButton_Clicked;
 		}
-	}
+
+        private void CalcularValorHoraButton_Clicked(object sender, EventArgs e)
+        {
+
+            double valorGanhoAnual = double.Parse(ValorGanhoMes.Text) * 12;
+            int totalDiasTrabalhadosPorAno = int.Parse(DiasTrabalhadosPorMes.Text) * 12;
+
+            if (!string.IsNullOrEmpty(DiasFeriasPorAno.Text))
+            {
+                totalDiasTrabalhadosPorAno -= int.Parse(DiasFeriasPorAno.Text);
+            }
+
+            double valorHora = valorGanhoAnual / (totalDiasTrabalhadosPorAno * int.Parse(HorasTrabalhadasPorDia.Text));
+
+            ValorDaHora.Text = $"{valorHora.ToString("C")} / hora";
+
+        }
+    }
 }
