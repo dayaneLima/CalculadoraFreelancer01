@@ -59,18 +59,22 @@ Edite o arquivo CalculoValorHoraPage.xaml e adicione o código abaixo:
     <ContentPage.Content>
         <StackLayout>
             
+            <Label Text="Valor ganho por mês" />
             <Entry Placeholder="Valor ganho por mês"
                    x:Name="ValorGanhoMes"
                    Keyboard="Numeric"/>
-            
+
+            <Label Text="Valor ganho por mês" />
             <Entry Placeholder="Horas trabalhadas por dia"
                    x:Name="HorasTrabalhadasPorDia"
                    Keyboard="Numeric"/>
-            
+
+            <Label Text="Dias trabalhados por mês" />
             <Entry Placeholder="Dias trabalhados por mês"
                    x:Name="DiasTrabalhadosPorMes"
                    Keyboard="Numeric"/>
-            
+
+            <Label Text="Dias de férias por ano" />
             <Entry Placeholder="Dias de férias por ano"
                    x:Name="DiasFeriasPorAno"
                    Keyboard="Numeric"/>
