@@ -12,7 +12,7 @@
                    x:Name="ValorGanhoMes"
                    Keyboard="Numeric"/>
 
-            <Label Text="Valor ganho por mês" />
+            <Label Text="Horas trabalhadas por dia" />
             <Entry Placeholder="Horas trabalhadas por dia"
                    x:Name="HorasTrabalhadasPorDia"
                    Keyboard="Numeric"/>
@@ -26,6 +26,7 @@
             <Entry Placeholder="Dias de férias por ano"
                    x:Name="DiasFeriasPorAno"
                    Keyboard="Numeric"/>
+
 
             <Label Text="R$ 00,00 / hora"
                    x:Name="ValorDaHora"
