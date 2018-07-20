@@ -97,7 +97,7 @@ Edite o arquivo CalculoValorHoraPage.xaml e adicione o código abaixo:
 
 Agora mandamos executar o projeto, a tela gerada deverá ser igual a esta:
 
-<img src="https://github.com/dayaneLima/CalculadoraFreelancer01/blob/master/Docs/Imgs/calculadoraFreelancerO1TelaValorHora.PNG" alt="Tela calculadora freelancer" width="260">
+<img src="https://github.com/dayaneLima/CalculadoraFreelancer01/blob/master/Docs/Imgs/calculadoraFreelancer01TelaValorHora.PNG" alt="Tela calculadora freelancer" width="260">
 
 Utilizamos nos campos de entrada de texto (Entry) o Keyboard="Numeric", mas há outros tipos de teclado, como Email e Telephone. Pra mais informações veja a documentação da Microsoft: <a  href='https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/text/entry' target="_blank">Documentação do Entry</a>
 
