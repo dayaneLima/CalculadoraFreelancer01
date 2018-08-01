@@ -103,8 +103,7 @@ Utilizamos nos campos de entrada de texto (Entry) o Keyboard="Numeric", mas há 
 
 ## Cálculo do valor da hora
 
-Todo arquivo .xaml tem uma classe vinculada a ele, terminado com o nome .xaml.cs, como mostrado na imagem abaixo.
-
+Todo arquivo .xaml tem uma classe vinculada a ele, terminado com o nome .xaml.cs.
 
 Tudo que é feito no xaml, conseguimos acessar na nossa classe C#, e nessa classe também conseguimos criar layouts e atribuir no nosso xaml. Ao utilizarmos essa classe, falamos que estamos fazendo código em <i>CodeBehind</i>.
 
