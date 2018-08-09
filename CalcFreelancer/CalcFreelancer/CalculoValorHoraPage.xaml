@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="CalculadoraFreelancer01.CalculoValorHoraPage"
+             x:Class="CalcFreelancer.CalculoValorHoraPage"
              Title="Valor da Hora"
              Padding="10">
     <ContentPage.Content>
@@ -9,34 +9,33 @@
 
             <Label Text="Valor ganho por mês" />
             <Entry Placeholder="Valor ganho por mês"
-                   x:Name="ValorGanhoMes"
-                   Keyboard="Numeric"/>
+                  x:Name="ValorGanhoMes"
+                  Keyboard="Numeric"/>
 
             <Label Text="Horas trabalhadas por dia" />
             <Entry Placeholder="Horas trabalhadas por dia"
-                   x:Name="HorasTrabalhadasPorDia"
-                   Keyboard="Numeric"/>
+                  x:Name="HorasTrabalhadasPorDia"
+                  Keyboard="Numeric"/>
 
             <Label Text="Dias trabalhados por mês" />
             <Entry Placeholder="Dias trabalhados por mês"
-                   x:Name="DiasTrabalhadosPorMes"
-                   Keyboard="Numeric"/>
+                  x:Name="DiasTrabalhadosPorMes"
+                  Keyboard="Numeric"/>
 
             <Label Text="Dias de férias por ano" />
             <Entry Placeholder="Dias de férias por ano"
-                   x:Name="DiasFeriasPorAno"
-                   Keyboard="Numeric"/>
-
+                  x:Name="DiasFeriasPorAno"
+                  Keyboard="Numeric"/>
 
             <Label Text="R$ 00,00 / hora"
-                   x:Name="ValorDaHora"
-                   FontSize="Large"
-                   TextColor="Green"/>
+                  x:Name="ValorDaHora"
+                  FontSize="Large"
+                  TextColor="Green"/>
 
             <Button Text="Calcular"
-                    BackgroundColor="#6699ff"
-                    TextColor="White"
-                    x:Name="CalcularValorHoraButton"/>
+                   BackgroundColor="#6699ff"
+                   TextColor="White"
+                   x:Name="CalcularValorHoraButton"/>
 
 
         </StackLayout>

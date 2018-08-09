@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
-namespace CalculadoraFreelancer01
+namespace CalcFreelancer
 {
 	public partial class MainPage : ContentPage
 	{

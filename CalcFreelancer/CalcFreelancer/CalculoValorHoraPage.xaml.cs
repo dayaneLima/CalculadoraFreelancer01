@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace CalculadoraFreelancer01
+namespace CalcFreelancer
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class CalculoValorHoraPage : ContentPage
@@ -15,9 +15,8 @@ namespace CalculadoraFreelancer01
 		public CalculoValorHoraPage ()
 		{
 			InitializeComponent ();
-
             CalcularValorHoraButton.Clicked += CalcularValorHoraButton_Clicked;
-		}
+        }
 
         private void CalcularValorHoraButton_Clicked(object sender, EventArgs e)
         {
